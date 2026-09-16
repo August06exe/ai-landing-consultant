@@ -32,7 +32,7 @@
 - `awesome-hermes-skills-README.md`：社区清单全文81KB（Editor's Picks/人格库/Memory Providers/Plugins…）
 - `byted-deepsearch-SKILL.md`：字节深度调研 skill 原文
 
-## 04-案例库/（结案客户脱敏精华，见 _说明.md）
+## 04-案例库/（示例案例×4 + 结案精华回填，见 _说明.md）
 
 ## 顾问自己的技能（在 `01-顾问agent/skills/`）
 
