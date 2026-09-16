@@ -20,10 +20,17 @@
 
 ## 本地开发
 
+克隆后第一件事：**启用防泄露门卫**（pre-commit 钩子会拦截误提交的客户数据/密钥）：
+
+```bash
+git config core.hooksPath scripts/hooks
+```
+
 无需安装任何依赖——这是一套 markdown 方法论仓库。脚本用 bash：
 
 ```bash
 bash scripts/fetch-hermes-docs.sh          # 拉官方文档到本地知识库
 bash scripts/new-client.sh 测试客户         # 体验建户脚手架
 bash scripts/check-package.sh "05-客户/2026-09-20-测试客户"  # 体验交付包自检
+bash scripts/check-privacy.sh              # 隐私全量体检（推送前必跑）
 ```

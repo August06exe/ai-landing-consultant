@@ -1,0 +1,58 @@
+#!/bin/sh
+# 防泄露门卫（pre-commit 钩子）
+# 启用：git config core.hooksPath scripts/hooks
+# 拦截两类东西：①客户数据路径（05-客户除模板外/归档/工作区/商务/调研/陪跑/复盘）②疑似密钥与个人敏感信息
+# 确有正当理由要提交被拦截内容：ALLOW_RISKY_COMMIT=1 git commit ...（写明理由于提交信息）
+
+ALLOW="${ALLOW_RISKY_COMMIT:-}"
+if [ -n "$ALLOW" ]; then
+  echo "⚠️  ALLOW_RISKY_COMMIT=1：本次提交跳过防泄露检查（责任自负，已在历史中）"
+  exit 0
+fi
+
+fail=0
+
+echo "🔒 门卫检查 1/2：路径防线..."
+BAD=$(git diff --cached --name-only | grep -E \
+  -e '^05-客户/' -e '^06-归档/' -e '^07-工作区/' -e '^(.*/)?00-商务/' \
+  -e '/04-调研/' -e '/03-陪跑日志\.md$' -e '/05-复盘\.md$' \
+  -e '01-顾问agent/skills/deep-research/' \
+  | grep -v '^05-客户/_模板/')
+if [ -n "$BAD" ]; then
+  echo "❌ 以下文件属于客户数据/禁区，禁止提交："
+  echo "$BAD" | sed 's/^/    /'
+  fail=1
+fi
+
+echo "🔒 门卫检查 2/2：密钥与敏感信息..."
+SECRETS=$(git diff --cached -U0 | grep -E '^\+' | grep -nE \
+  -e '1[3-9][0-9]{9}' \
+  -e 'sk-[A-Za-z0-9]{16,}' \
+  -e 'ghp_[A-Za-z0-9]{20,}' \
+ -e 'github_pat_[A-Za-z0-9_]{20,}' \
+  -e 'AKIA[0-9A-Z]{16}' \
+  -e 'xox[bap]s?-[^ ]{10,}' \
+  -e 'BEGIN [A-Z ]*PRIVATE KEY' \
+  | head -10)
+if [ -n "$SECRETS" ]; then
+  echo "❌ 新增内容里疑似出现 密钥/手机号/API key："
+  echo "$SECRETS" | sed 's/^/    /'
+  echo "    （若为文档中的掩码示例且确认无害，ALLOW_RISKY_COMMIT=1 越过）"
+  fail=1
+fi
+
+# 高危文件扩展名
+KEYFILES=$(git diff --cached --name-only | grep -E '\.(pem|key|p12|pfx)$|id_rsa|\.env')
+if [ -n "$KEYFILES" ]; then
+  echo "❌ 以下文件疑似密钥/env 文件，禁止提交："
+  echo "$KEYFILES" | sed 's/^/    /'
+  fail=1
+fi
+
+if [ $fail -eq 1 ]; then
+  echo ""
+  echo "🛑 提交被防泄露门卫拦截。客户数据与密钥一旦推上公网就收不回。"
+  exit 1
+fi
+echo "✅ 门卫放行：无客户数据、无疑似密钥。"
+exit 0
