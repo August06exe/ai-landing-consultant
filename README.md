@@ -8,6 +8,7 @@
 提示词 + 技能 + 知识库 + 11 道标准工序。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![隐私门卫](https://github.com/August06exe/ai-landing-consultant/actions/workflows/privacy.yml/badge.svg)](https://github.com/August06exe/ai-landing-consultant/actions/workflows/privacy.yml)
 [![当前平台: Hermes Agent](https://img.shields.io/badge/当前平台-Hermes%20Agent-blueviolet)](https://github.com/NousResearch/hermes-agent)
 [![方法论: 平台无关](https://img.shields.io/badge/方法论-平台无关-informational)](#)
 [![语言](https://img.shields.io/badge/语言-中文优先-red)](#)
@@ -62,7 +63,7 @@ flowchart LR
 |---|---|---|
 | 🧠 **顾问提示词** | 资深落地顾问人格：证据驱动、ROI 意识、1-3-1 决策请示、风险前置 | 装进任何 CLI agent 就能用 |
 | 🛠️ **4 个技能** | grilling 拷问式访谈 · deep-search 调研 · web-crawler 抓取 | 站在 [mattpocock/skills](https://github.com/mattpocock/skills)（MIT）肩上 |
-| 📚 **落地知识库** | 渠道对照与选型（含微信 iLink 的坑！）、Windows 部署、国内模型接入、运维排查路由表、客户端技能配装清单 | 每条结论带官方文档行号锚点 |
+| 📚 **落地知识库** | 渠道对照与选型（含微信 iLink 的坑！）、Windows 部署、国内模型接入、运维排查路由表、**密钥与隐私基线**、客户端技能配装清单 | 每条结论带官方文档行号锚点 |
 | 🍜 **完整示例案例** | 一个（虚构的）拉面店老板：档案→交付包→使用卡全流程成品 | `02-知识库/04-案例库/示例-拉面店老王/` |
 | 🏭 **11 道标准工序（SOP）** | 交付线 c1-c6（三轮访谈→方案→交付包→部署→自装配验证→验收）+ 陪跑线 d1-d5（启动→分诊→迭代→进化守护→复盘归档） | 服务可以被复制，而不是每次靠灵感 |
 | 📋 **全套模板** | 客户档案、交付包（自装配指令/SOUL/工作流/进化守则/使用卡）、报价单、线索表、月度复盘 | 拿走就能开张 |
@@ -83,7 +84,7 @@ flowchart LR
 3. 按 `03-SOP/` 跑你的第一单（建议首单免费打样，按 `d5` 复盘把模板沉淀成自己的）。
 
 ### 🅲 我只要知识库
-直接读 `02-知识库/01-专题/` 六份专题，或运行下面脚本拉取最新 Hermes 官方全量文档：
+直接读 `02-知识库/01-专题/` 七份专题，或运行下面脚本拉取最新 Hermes 官方全量文档：
 
 ```bash
 bash scripts/fetch-hermes-docs.sh

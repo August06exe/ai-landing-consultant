@@ -1,0 +1,20 @@
+name: privacy-guard
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check-privacy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # 全历史，check-privacy 会扫描历史提交
+      - name: 隐私全量体检（客户数据/密钥）
+        run: bash scripts/check-privacy.sh
+      - name: 交付包模板结构自检
+        run: |
+          bash scripts/check-package.sh "05-客户/_模板" || \
+          echo "::warning::模板目录结构与 check-package 期望不一致（若为有意变更请同步更新脚本）"
