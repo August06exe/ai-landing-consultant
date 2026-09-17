@@ -21,7 +21,7 @@
 
 ## 处理
 
-违反者由维护者视情节警告、删帖直至封禁。投诉与安全问题一律走私密渠道：见 [SECURITY.md](SECURITY.md)。
+违反者由维护者视情节警告、删帖直至封禁。投诉与安全问题一律走私密渠道：见 [SECURITY.md](../SECURITY.md)。
 
 ## Attribution
 

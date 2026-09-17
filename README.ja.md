@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src=".github/assets/banner.svg" alt="AI ランディング・コンサルタント" width="100%">
+<img src=".github/assets/banner.svg" alt="AI導入コンサルタント" width="100%">
 
 # お客様のデータは、お客様のパソコンの中だけに
 

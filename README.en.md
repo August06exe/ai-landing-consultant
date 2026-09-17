@@ -34,7 +34,7 @@ Self-hosted AI agents are a toy for technical users and a wall of jargon for eve
 
 The first principle of the whole system — and what separates it from "it runs, ship it" deployment guides:
 
-- **Domain red lines come first.** Four skill packs (finance, investment, data, legal) ship with compliance red lines and forbidden-phrase lists. "Place the trade for me" or "draft my tax opinion" must produce a refusal-plus-escalation, never compliance.
+- **Domain red lines come first.** Four skill packs (finance, investment, data, legal) ship with compliance red lines and forbidden-phrase lists. "Place the trade for me" or "draft my tax opinion" must produce a refusal plus escalation — never blind compliance.
 - **Organize, never decide.** Every delivered agent is written as an information organizer — judgment calls and execution go back to the owner.
 - **Three-layer privacy guard.** Real client files, quotes, and screen recordings never enter the repo. `.gitignore` + pre-commit gatekeeper + CI privacy checks. Fork freely; nothing sensitive comes along. See [SECURITY.md](SECURITY.md).
 
@@ -102,7 +102,7 @@ sequenceDiagram
 | 🛠️ **8 skills** | grill-me/grilling interview method · deep-search · web-crawler · **four domain advisors: finance / investment / data / legal**, each with compliance red lines | Built on [mattpocock/skills](https://github.com/mattpocock/skills) (MIT) |
 | 📚 **Knowledge base ×13** | Channel selection (including the WeChat iLink pitfalls), Windows/Desktop deployment, model access, ops triage, secrets & privacy baseline, pain-point research, **a complete Desktop user guide**, **a full instruction audit** (38 verdicts, 11 fixed in-place), **a world-class facade benchmark** | Every claim carries a source and date; instructions audited line-by-line against official docs |
 | 🧩 **Workflow recipes** | Six universal patterns · heartbeat recipe · machine-migration runbook | Recognize the pattern, copy the skeleton, finish with the 7-step methodology |
-| 🍜 **Sample cases ×4** | See the table below | One package skeleton × four compliance regimes |
+| 🍜 **Sample cases ×6** | See the table below | One package skeleton × four compliance regimes |
 | 🏭 **11 SOPs (v2)** | Delivery line c1-c6 + companion line d1-d5, **each with acceptance checklists** | Consulting that replicates — not vibes |
 | 📋 **Full templates** | Client intake, delivery package (8 pieces), quotes, lead tracker, monthly retro | Walk out with a business |
 | 📜 **Service standard** | Three tiers, retainer SLA, out-of-scope policy, review grading | The constitution, if you want to sell this |
@@ -111,10 +111,12 @@ sequenceDiagram
 
 *All fictional — and yes, template-ready.*
 
-| Case | Domain / tier | One-liner | How red lines land |
+| Case | Domain / tier* | One-liner | How red lines land |
+
+*tier = service package (L1/L2/L3, see Service standard §1); sensitivity tiers (L-sensitive etc.) follow the secrets baseline guide — both are Chinese-language docs, the structure is the point.
 |---|---|---|---|
 | [🍜 Ramen shop](02-知识库/04-案例库/示例-拉面店老王/README.md) | Restaurant / L2 | Morning briefings, social posts, review triage, ledger nudges | Three red lines in the evolution rules |
-| [📒 Accounting firm](02-知识库/04-案例库/示例-财务会计月结/README.md) | Finance / L-敏感 | Monthly bookkeeping triage, zero external skills | "Organize, never decide" in every workflow |
+| [📒 Accounting firm](02-知识库/04-案例库/示例-财务会计月结/README.md) | Finance / L-sensitive* | Monthly bookkeeping triage, zero external skills | "Organize, never decide" in every workflow |
 | [📈 Individual investor](02-知识库/04-案例库/示例-投资人大盘追踪/README.md) | Investment / L3 | Pre-market briefings, never directional advice | Forbidden-phrase list baked into AGENTS.md; output stays private |
 | [🦷 Dental clinic](02-知识库/04-案例库/示例-诊所预约管理/README.md) | Healthcare / L3-lite | Appointment management | Patient data minimized (surname + last digits); records never touched |
 | [🥗 Review butler](02-知识库/04-案例库/示例-餐饮评价管家/README.md) | Restaurant / L2 | Review triage + reply drafts (honest human-fed data) | Drafts never auto-sent; food-safety & refunds escalate to human |
@@ -182,7 +184,7 @@ flowchart TB
 
 ```
 01-顾问agent/   Consultant prompt + skills/ (interview, research, crawler + 4 domain advisors)
-02-知识库/      Knowledge base: 13 field guides | official docs (script-pulled) | reference skills | 4 cases | recipes
+02-知识库/      Knowledge base: 13 field guides | official docs (script-pulled) | reference skills | 6 cases | recipes
 03-SOP/         c1-c6 delivery | d1-d5 companion | workflow methodology (each with checklists)
 04-运营/        Operations: kickoff prompt, service standard, file conventions, quotes, retros
 05-客户/        _templates/ (active client data stays local — see .gitignore)
@@ -241,7 +243,7 @@ The most valuable contribution is a **real landing case** — open an Issue with
 - [obra/superpowers](https://github.com/obra/superpowers) (MIT) — methodology-as-skills and release engineering patterns
 - [awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases) (MIT) — use-case entry format
 
-Full list in [THIRD-PARTY-CREDITS.md](THIRD-PARTY-CREDITS.md). Released under [MIT](LICENSE) — take it, sell with it, and come back to file an Issue telling us who you landed it for.
+Full list in [THIRD-PARTY-CREDITS.md](THIRD-PARTY-CREDITS.md). Released under [MIT](LICENSE) — take it, sell with it, and come back to file an issue telling us who you landed it for.
 
 <div align="center">
 

@@ -34,13 +34,23 @@ flowchart LR
     A["用案例投稿模板<br/>开 Issue"] --> B{"维护者初审<br/>48h 内"}
     B -->|"缺信息"| C["补需求细节<br/>（评论里问答）"]
     C --> B
-    B -->|"通过"| D["按八件套骨架写案例<br/>（可引用拉面店案例作参照）"]
+    B -->|"通过"| D["按九件套骨架写案例<br/>（结构参照示例-征期提醒官：它过九件套；拉面店是 v1 骨架入门）"]
     D --> E["自检：check-package.sh<br/>+ 九件套齐全<br/>+ 领域红线用例"]
     E --> F["提 PR 进 04-案例库/"]
     F --> G{"终审：<br/>结构/红线/脱敏"}
     G -->|"通过"| H["合入 + 案例库索引登记<br/>README 致谢"]
     G -->|"要改"| E
 ```
+
+## For international contributors (English summary)
+
+**What's most needed**: real landing cases → open an Issue with the case template, then PR into `02-知识库/04-案例库/` (sanitize: fake names, redact screenshots). Also welcome: field-guide fixes (cite official docs), SOP revisions (+0.1 version bump + changelog line), platform adapters, translations.
+
+**good first issue tiers**: `typo` → `case` → `recipe` → `i18n` → `help wanted: kb` / `platform` (see table above; claim by commenting "我来").
+
+**Nine-piece delivery package** (see definition above the flowchart) is the acceptance bar for cases; run `bash scripts/check-numbers.sh` and `bash scripts/check-privacy.sh` before pushing. **Never commit real client data.**
+
+Translation naming: follow [docs/i18n-术语表.md](docs/i18n-术语表.md) — terms must be registered there before use.
 
 ## 规矩（小而硬）
 
@@ -63,7 +73,7 @@ git config core.hooksPath scripts/hooks
 ```bash
 bash scripts/fetch-hermes-docs.sh          # 拉官方文档到本地知识库
 bash scripts/new-client.sh 测试客户         # 体验建户脚手架
-bash scripts/check-package.sh "05-客户/2026-09-20-测试客户"  # 体验交付包自检
+bash scripts/new-client.sh 测试客户 && bash scripts/check-package.sh "05-客户/2026-09-20-测试客户"  # 先建户再自检
 bash scripts/check-privacy.sh              # 隐私全量体检（推送前必跑）
 bash scripts/check-numbers.sh              # 门面数字一致性+锚点断言（改 README/案例数后必跑）
 ```

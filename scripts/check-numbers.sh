@@ -37,11 +37,13 @@ echo "=== 文档声明扫描 ==="
 check_absent() { # 文件 错误数字模式 说明
   if grep -q "$2" "$1" 2>/dev/null; then bad "$1 含旧口径「$3」→ 改为当前口径"; else ok "$1 无旧口径「$3」"; fi
 }
-check_absent README.md        "十二份专题\|12 份落地专题\|×12\|八件套" "12 份专题/八件套"
+check_absent README.md        "十二份专题\|12 份落地专题\|×12\|八件套\|示例案例×4\|案例 ×4" "旧专题/案例口径"
+check_absent README.en.md     "12 field guides\|×12\|Sample cases ×4\|4 cases"   "old case count"
 check_absent README.en.md     "12 field guides\|×12\|eight-piece"     "12 field guides"
 check_absent README.ja.md     "贡献者募集份\|手法論\|方案設計"          "中文残留"
 check_absent docs/index.html  "十二份专题"                              "12 份专题"
-check_absent "04-运营/宣传素材/launch文案-20260918.md" "12 份落地专题\|12 field guides" "12 份专题"
+check_absent "04-运营/宣传素材/launch文案-20260918.md" "12 份落地专题\|12 field guides\|四个行业案例\|Four fictional" "旧案例口径"
+check_absent docs/index.html  "4 个完整示例案例" "旧案例口径"
 
 # ---------- 内部锚点 lint（zh/en README 的 ](#…) 是否可解析） ----------
 anchor_exists() { # 文件 锚点
