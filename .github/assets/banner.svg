@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="AI 落地顾问 · ai-landing-consultant">
+  <!-- AI Landing Consultant banner · hand-crafted SVG · no external fonts/images -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#101c30"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58a6ff"/>
+      <stop offset="1" stop-color="#7ee787"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="320" fill="url(#bg)"/>
+
+  <!-- decorative node-graph motif, right side (self-assembly metaphor) -->
+  <g stroke="#21283b" stroke-width="2" fill="none">
+    <line x1="1040" y1="90"  x2="1120" y2="150"/>
+    <line x1="1120" y1="150" x2="1046" y2="216"/>
+    <line x1="1120" y1="150" x2="1196" y2="96"/>
+    <line x1="1120" y1="150" x2="1190" y2="224"/>
+    <line x1="1040" y1="90"  x2="1046" y2="216"/>
+  </g>
+  <g>
+    <circle cx="1040" cy="90"  r="10" fill="#0d1117" stroke="#58a6ff" stroke-width="3"/>
+    <circle cx="1196" cy="96"  r="8"  fill="#0d1117" stroke="#30363d" stroke-width="3"/>
+    <circle cx="1046" cy="216" r="8"  fill="#0d1117" stroke="#30363d" stroke-width="3"/>
+    <circle cx="1190" cy="224" r="8"  fill="#0d1117" stroke="#30363d" stroke-width="3"/>
+    <circle cx="1120" cy="150" r="14" fill="#101c30" stroke="#7ee787" stroke-width="3"/>
+    <circle cx="1120" cy="150" r="4"  fill="#7ee787"/>
+  </g>
+
+  <!-- eyebrow -->
+  <text x="80" y="78" font-family="ui-monospace, Consolas, monospace" font-size="17" letter-spacing="3" fill="#58a6ff">ai-landing-consultant</text>
+
+  <!-- zh main title -->
+  <text x="76" y="152" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="58" font-weight="700" fill="#f0f6fc">AI 落地顾问</text>
+  <!-- accent underline -->
+  <rect x="80" y="168" width="264" height="5" rx="2.5" fill="url(#accent)"/>
+
+  <!-- zh subtitle -->
+  <text x="80" y="212" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="23" fill="#c9d1d9">让完全不懂技术的人，拥有一台真正每天在干活的专属 AI agent</text>
+
+  <!-- en subtitle -->
+  <text x="80" y="246" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="19" fill="#8b949e">Ship AI agents that non-technical users actually use — a consultant's playbook, open-sourced.</text>
+
+  <!-- fact chips (real repo facts only) -->
+  <g font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="16">
+    <rect x="80"  y="266" width="150" height="32" rx="16" fill="#161b22" stroke="#30363d"/>
+    <text x="155" y="287" text-anchor="middle" fill="#c9d1d9">11 道标准工序</text>
+    <rect x="242" y="266" width="170" height="32" rx="16" fill="#161b22" stroke="#30363d"/>
+    <text x="327" y="287" text-anchor="middle" fill="#c9d1d9">4 领域合规技能</text>
+    <rect x="424" y="266" width="170" height="32" rx="16" fill="#161b22" stroke="#30363d"/>
+    <text x="509" y="287" text-anchor="middle" fill="#c9d1d9">4 完整示例案例</text>
+    <rect x="606" y="266" width="180" height="32" rx="16" fill="#161b22" stroke="#30363d"/>
+    <text x="696" y="287" text-anchor="middle" fill="#c9d1d9">自装配交付范式</text>
+  </g>
+
+  <!-- language hint -->
+  <text x="1200" y="296" text-anchor="end" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#6e7681">简体中文 · English · 日本語</text>
+</svg>
