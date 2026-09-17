@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 落地顾问 · ai-landing-consultant</title>
+<meta name="description" content="让完全不懂技术的人，拥有一台真正每天在干活的专属 AI agent。11 道标准工序、4 领域合规技能、自装配交付范式，MIT 开源。">
+<style>
+  :root{--bg:#0d1117;--bg2:#101c30;--fg:#f0f6fc;--fg2:#c9d1d9;--fg3:#8b949e;--accent:#58a6ff;--accent2:#7ee787;--card:#161b22;--line:#30363d;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:linear-gradient(135deg,var(--bg),var(--bg2));color:var(--fg2);font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;}
+  a{color:var(--accent);text-decoration:none;} a:hover{text-decoration:underline;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+  header{padding:24px 0;}
+  header .lang{float:right;font-size:14px;color:var(--fg3);}
+  header .lang a{color:var(--fg3);margin-left:12px;}
+  .hero{text-align:center;padding:48px 0 40px;}
+  .hero img{max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);}
+  .hero h1{font-size:34px;margin-top:32px;color:var(--fg);}
+  .hero h1 span{color:var(--accent);}
+  .hero p.sub{font-size:18px;color:var(--fg3);margin-top:10px;}
+  .cta{margin-top:28px;}
+  .btn{display:inline-block;padding:12px 28px;border-radius:8px;font-weight:600;margin:0 8px 8px;}
+  .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#0d1117;}
+  .btn.ghost{border:1px solid var(--line);color:var(--fg2);}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:32px 0;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px;}
+  .card h3{color:var(--fg);font-size:17px;margin-bottom:8px;}
+  .card p{font-size:14px;color:var(--fg3);}
+  .card .tag{display:inline-block;font-size:12px;color:var(--accent2);border:1px solid var(--line);border-radius:10px;padding:1px 10px;margin-bottom:10px;}
+  section{padding:36px 0;}
+  section h2{color:var(--fg);font-size:24px;margin-bottom:18px;border-left:4px solid var(--accent);padding-left:12px;}
+  ol,ul{padding-left:22px;}
+  li{margin:6px 0;}
+  code{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1px 7px;font-size:14px;font-family:ui-monospace,Consolas,monospace;color:var(--accent2);}
+  pre{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:12px 0;}
+  pre code{background:none;border:none;color:var(--fg2);}
+  footer{border-top:1px solid var(--line);margin-top:40px;padding:24px 0;text-align:center;color:var(--fg3);font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="lang"><a href="https://github.com/August06exe/ai-landing-consultant/blob/main/README.md">简体中文</a><a href="https://github.com/August06exe/ai-landing-consultant/blob/main/README.en.md">English</a><a href="https://github.com/August06exe/ai-landing-consultant">GitHub ↗</a></span>
+  <span style="font-family:ui-monospace,Consolas,monospace;color:var(--accent);letter-spacing:2px;">ai-landing-consultant</span>
+</header>
+
+<section class="hero">
+  <img src="assets/banner.svg" alt="AI 落地顾问">
+  <h1>客户的数据，只住在<span>客户自己的电脑里</span></h1>
+  <p class="sub">让完全不懂技术的人，拥有一台真正每天在干活的专属 AI agent。</p>
+  <div class="cta">
+    <a class="btn primary" href="https://github.com/August06exe/ai-landing-consultant#快速开始">三分钟上手</a>
+    <a class="btn ghost" href="https://github.com/August06exe/ai-landing-consultant/tree/main/02-%E7%9F%A5%E8%AF%86%E5%BA%93/04-%E6%A1%88%E4%BE%8B%E5%BA%93">先看案例</a>
+  </div>
+</section>
+
+<section>
+  <h2>为什么是它</h2>
+  <div class="grid">
+    <div class="card"><span class="tag">隐私主权</span><h3>数据不出门</h3><p>自托管：agent 跑在客户自己电脑上，聊天记录、业务数据永不上传第三方。开源的是产线，不是客户档案。</p></div>
+    <div class="card"><span class="tag">可复制交付</span><h3>11 道标准工序</h3><p>访谈、方案、交付包、部署、验收、陪跑——每道工序带质量标尺。服务可以被复制，而不是每次靠灵感。</p></div>
+    <div class="card"><span class="tag">自装配范式</span><h3>空白 agent 自己装自己</h3><p>交付包不是文档，是施工图：部署只做到「agent 活了+模型通了」，它自己按包内指令装配成人格、工作流、定时任务。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>三分钟上手</h2>
+  <ol>
+    <li><strong>我是老板，想配一个 AI 助理</strong> → 把仓库给任何会用电脑的朋友，让 ta 读 <code>01-顾问agent/提示词.md</code>，ta 会先给你一张「初访题单」。</li>
+    <li><strong>我想开展 AI 落地服务</strong> → 读 <code>04-运营/服务标准.md</code>，按 <code>03-SOP/</code> 跑第一单（建议首单免费打样）。</li>
+    <li><strong>我只要知识库</strong> → 直接读 <code>02-知识库/01-专题/</code> 十二份专题与配方库。</li>
+  </ol>
+  <pre><code>git clone https://github.com/August06exe/ai-landing-consultant.git</code></pre>
+</section>
+
+<section>
+  <h2>四个完整示例案例</h2>
+  <div class="grid">
+    <div class="card"><span class="tag">通用</span><h3>🍜 拉面店老王</h3><p>早报+朋友圈文案+评价整理+台账提醒。最适合第一次看懂「交付包长什么样」。</p></div>
+    <div class="card"><span class="tag">财务</span><h3>📒 小会计事务所</h3><p>月结流水整理，零外部技能；「整理不决策」红线落到每条工作流。</p></div>
+    <div class="card"><span class="tag">投资</span><h3>📈 个人投资者</h3><p>盘前简报；禁用词表全文进 AGENTS.md，绝不输出方向性措辞。</p></div>
+    <div class="card"><span class="tag">医疗敏感</span><h3>🦷 口腔诊所</h3><p>预约管理；患者信息最小化规则（姓氏+尾号），病历影像永不接触。</p></div>
+  </div>
+  <p style="text-align:center;"><a class="btn ghost" href="https://github.com/August06exe/ai-landing-consultant/tree/main/02-%E7%9F%A5%E8%AF%86%E5%BA%93/04-%E6%A1%88%E4%BE%8B%E5%BA%93">进案例库 →</a></p>
+</section>
+
+<footer>
+  <p>MIT License · 由夜航工程师与人类维护者共同打造 · <a href="https://github.com/August06exe/ai-landing-consultant">GitHub</a></p>
+  <p>如果这套流程帮你签下了第一单，欢迎回来给个 ⭐</p>
+</footer>
+
+</div>
+</body>
+</html>
