@@ -24,7 +24,7 @@ echo "=== 仓库实测：专题=$N_TOPICS 案例=$N_CASES 领域技能=$N_ADVISO
 
 # ---------- 声明断言 ----------
 [ "$N_TOPICS" -eq 13 ]    && ok "专题 13"    || bad "专题数实测 $N_TOPICS ≠ 声明 13（改 README/文案或补专题后同步）"
-[ "$N_CASES" -eq 4 ]      && ok "案例 4"      || bad "案例数实测 $N_CASES ≠ 声明 4"
+[ "$N_CASES" -eq 6 ]      && ok "案例 6"      || bad "案例数实测 $N_CASES ≠ 声明 6"
 [ "$N_ADVISORS" -eq 4 ]   && ok "领域技能 4"  || bad "领域技能实测 $N_ADVISORS ≠ 声明 4"
 [ "$N_SKILLS" -eq 8 ]     && ok "入库技能 8"  || bad "入库技能实测 $N_SKILLS ≠ 声明 8"
 [ "$N_SOPS" -eq 11 ]      && ok "工序 11"     || bad "工序实测 $N_SOPS ≠ 声明 11"

@@ -51,7 +51,7 @@
     <rect x="242" y="266" width="170" height="32" rx="16" fill="#161b22" stroke="#30363d"/>
     <text x="327" y="287" text-anchor="middle" fill="#c9d1d9">4 领域合规技能</text>
     <rect x="424" y="266" width="170" height="32" rx="16" fill="#161b22" stroke="#30363d"/>
-    <text x="509" y="287" text-anchor="middle" fill="#c9d1d9">4 完整示例案例</text>
+    <text x="509" y="287" text-anchor="middle" fill="#c9d1d9">6 完整示例案例</text>
     <rect x="606" y="266" width="180" height="32" rx="16" fill="#161b22" stroke="#30363d"/>
     <text x="696" y="287" text-anchor="middle" fill="#c9d1d9">自装配交付范式</text>
   </g>

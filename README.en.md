@@ -14,9 +14,9 @@
 
 **We don't deliver documents. We deliver an agent that assembles itself.**
 
-11 standard operating procedures · 8 consultant skills (4 domain-compliance packs included) · 4 complete sample cases · 13 field guides
+11 standard operating procedures · 8 consultant skills (4 domain-compliance packs included) · 6 complete sample cases · 13 field guides
 
-[Get started](#quick-start) · [See a full case first](#four-complete-sample-cases) · [The methodology](#11-standard-operating-procedures) · [FAQ](#faq)
+[Get started](#quick-start) · [See a full case first](#six-complete-sample-cases) · [The methodology](#11-standard-operating-procedures) · [FAQ](#faq)
 
 </div>
 
@@ -107,16 +107,18 @@ sequenceDiagram
 | 📋 **Full templates** | Client intake, delivery package (8 pieces), quotes, lead tracker, monthly retro | Walk out with a business |
 | 📜 **Service standard** | Three tiers, retainer SLA, out-of-scope policy, review grading | The constitution, if you want to sell this |
 
-### Four complete sample cases
+### Six complete sample cases
 
 *All fictional — and yes, template-ready.*
 
-| Case | Domain / sensitivity | One-liner | How red lines land |
+| Case | Domain / tier | One-liner | How red lines land |
 |---|---|---|---|
-| [🍜 Ramen shop](02-知识库/04-案例库/示例-拉面店老王/README.md) | Restaurant / general | Morning briefings, social posts, review triage, ledger nudges | Three red lines in the evolution rules |
-| [📒 Accounting firm](02-知识库/04-案例库/示例-财务会计月结/README.md) | Finance / L-sensitive | Monthly bookkeeping triage, zero external skills | "Organize, never decide" in every workflow |
-| [📈 Individual investor](02-知识库/04-案例库/示例-投资人大盘追踪/README.md) | Investment / M-sensitive | Pre-market briefings, never directional advice | Forbidden-phrase list baked into AGENTS.md |
-| [🦷 Dental clinic](02-知识库/04-案例库/示例-诊所预约管理/README.md) | Healthcare / H-sensitive | Appointment management | Patient data minimized (surname + last digits); records never touched |
+| [🍜 Ramen shop](02-知识库/04-案例库/示例-拉面店老王/README.md) | Restaurant / L2 | Morning briefings, social posts, review triage, ledger nudges | Three red lines in the evolution rules |
+| [📒 Accounting firm](02-知识库/04-案例库/示例-财务会计月结/README.md) | Finance / L-敏感 | Monthly bookkeeping triage, zero external skills | "Organize, never decide" in every workflow |
+| [📈 Individual investor](02-知识库/04-案例库/示例-投资人大盘追踪/README.md) | Investment / L3 | Pre-market briefings, never directional advice | Forbidden-phrase list baked into AGENTS.md; output stays private |
+| [🦷 Dental clinic](02-知识库/04-案例库/示例-诊所预约管理/README.md) | Healthcare / L3-lite | Appointment management | Patient data minimized (surname + last digits); records never touched |
+| [🥗 Review butler](02-知识库/04-案例库/示例-餐饮评价管家/README.md) | Restaurant / L2 | Review triage + reply drafts (honest human-fed data) | Drafts never auto-sent; food-safety & refunds escalate to human |
+| [🗓️ Tax-deadline alarm](02-知识库/04-案例库/示例-征期提醒官/README.md) | Sole proprietor / L1-minimal | Filing-deadline reminders; the ideal second engagement | Remind only, never file; never touches tax credentials |
 
 ## 11 standard operating procedures
 
