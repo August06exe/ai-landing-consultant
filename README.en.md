@@ -100,7 +100,7 @@ sequenceDiagram
 |---|---|---|
 | 🧠 **Consultant prompt** | A senior landing consultant's persona: evidence-driven, ROI-minded, 1-3-1 escalation, risk-first | Load it into any CLI agent and go |
 | 🛠️ **8 skills** | grill-me/grilling interview method · deep-search · web-crawler · **four domain advisors: finance / investment / data / legal**, each with compliance red lines | Built on [mattpocock/skills](https://github.com/mattpocock/skills) (MIT) |
-| 📚 **Knowledge base ×13** | Channel selection (including the WeChat iLink pitfalls), Windows/Desktop deployment, model access, ops triage, secrets & privacy baseline, pain-point research, **a complete Desktop user guide**, **a 41-assertion instruction audit**, **a world-class facade benchmark** | Every claim carries a source and date; instructions audited line-by-line against official docs |
+| 📚 **Knowledge base ×13** | Channel selection (including the WeChat iLink pitfalls), Windows/Desktop deployment, model access, ops triage, secrets & privacy baseline, pain-point research, **a complete Desktop user guide**, **a full instruction audit** (38 verdicts, 11 fixed in-place), **a world-class facade benchmark** | Every claim carries a source and date; instructions audited line-by-line against official docs |
 | 🧩 **Workflow recipes** | Six universal patterns · heartbeat recipe · machine-migration runbook | Recognize the pattern, copy the skeleton, finish with the 7-step methodology |
 | 🍜 **Sample cases ×4** | See the table below | One package skeleton × four compliance regimes |
 | 🏭 **11 SOPs (v2)** | Delivery line c1-c6 + companion line d1-d5, **each with acceptance checklists** | Consulting that replicates — not vibes |
@@ -194,7 +194,7 @@ docs/           GitHub Pages landing (not enabled) | i18n glossary
 ## Roadmap
 
 - [x] Four-case matrix / recipe library / domain skill packs / SOP v2 (v1.0, 2026-09-16)
-- [x] Theory pinned down: full Desktop guide + 41-assertion instruction audit (2026-09-18)
+- [x] Theory pinned down: full Desktop guide + full instruction audit (38 verdicts, 11 fixed in-place, 2026-09-18)
 - [ ] **Demo video up top**: a 60-second "hand over the package → self-assembly → first chat message" screen capture
 - [ ] Package the 11 SOPs as a Hermes plugin/skill group (`hermes plugins install` one-liner)
 - [ ] Platform adapter layer: bring the package pattern to OpenClaw et al.
