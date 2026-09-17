@@ -200,7 +200,7 @@ docs/           GitHub Pages landing（未启用）| i18n 术语表
 - [x] 四案例矩阵 / 配方库 / 四领域技能包 / SOP v2（v1.0，2026-09-16）
 - [x] 理论钉死：Desktop 完整使用指南 + 指令断言全量核对（38 行判定，11 ✗ 当场修源，2026-09-18）
 - [ ] **Demo 视频置顶**：60 秒「甩包→自装配→微信收汇报」录屏（脱敏）
-- [ ] 11 道工序打包成 Hermes 插件/技能组（`hermes plugins install` 一条命令装顾问）
+- [ ] 11 道工序打包成 Hermes 技能组，两步走：①转 skills tap 仓库（零代码，`hermes skills tap add` 即装）②薄壳插件（plugin.yaml+register，参照 superpowers 形态）——`hermes plugins install` 一条命令装顾问
 - [ ] 平台适配层：交付包范式适配 OpenClaw 等（存量用户迁移指南）
 - [ ] 一键部署向导：c4 做成给小白点「下一步」的脚本（含升级/卸载/回滚）
 - [ ] 内容质量 CI：交付包九件套结构 lint + 案例库链接检查

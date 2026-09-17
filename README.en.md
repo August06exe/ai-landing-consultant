@@ -198,7 +198,7 @@ docs/           GitHub Pages landing (not enabled) | i18n glossary
 - [x] Four-case matrix / recipe library / domain skill packs / SOP v2 (v1.0, 2026-09-16)
 - [x] Theory pinned down: full Desktop guide + full instruction audit (38 verdicts, 11 fixed in-place, 2026-09-18)
 - [ ] **Demo video up top**: a 60-second "hand over the package → self-assembly → first chat message" screen capture
-- [ ] Package the 11 SOPs as a Hermes plugin/skill group (`hermes plugins install` one-liner)
+- [ ] Package the 11 SOPs as a Hermes skill group, two steps: ①skills-tap repo (zero code, installable via `hermes skills tap add`) ②thin plugin shell (plugin.yaml + register, superpowers-style) — then `hermes plugins install` becomes the one-liner
 - [ ] Platform adapter layer: bring the package pattern to OpenClaw et al.
 - [ ] One-click deploy wizard: c4 as a next-next-done installer (upgrade/uninstall/rollback included)
 - [ ] Content-quality CI: package-structure lint + case-link checker
