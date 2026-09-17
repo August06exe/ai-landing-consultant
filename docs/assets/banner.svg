@@ -36,7 +36,7 @@
   <!-- zh main title -->
   <text x="76" y="152" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="58" font-weight="700" fill="#f0f6fc">AI 落地顾问</text>
   <!-- accent underline -->
-  <rect x="80" y="168" width="264" height="5" rx="2.5" fill="url(#accent)"/>
+  <rect x="80" y="168" width="400" height="5" rx="2.5" fill="url(#accent)"/>
 
   <!-- zh subtitle -->
   <text x="80" y="212" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="23" fill="#c9d1d9">让完全不懂技术的人，拥有一台真正每天在干活的专属 AI agent</text>

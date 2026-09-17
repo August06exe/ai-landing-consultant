@@ -31,9 +31,9 @@
   <text x="80" y="140" font-family="ui-monospace, Consolas, monospace" font-size="24" letter-spacing="4" fill="#58a6ff">ai-landing-consultant</text>
 
   <text x="76" y="248" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="84" font-weight="700" fill="#f0f6fc">AI 落地顾问</text>
-  <rect x="80" y="272" width="360" height="7" rx="3.5" fill="url(#accent)"/>
+  <rect x="80" y="272" width="480" height="7" rx="3.5" fill="url(#accent)"/>
 
-  <text x="80" y="342" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="30" fill="#c9d1d9">让完全不懂技术的人，拥有一台真正每天在干活的专属 AI agent</text>
+  <text x="80" y="342" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#c9d1d9">让完全不懂技术的人，拥有一台真正每天在干活的专属 AI agent</text>
   <text x="80" y="388" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#8b949e">Ship AI agents that non-technical users actually use.</text>
 
   <g font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="21">
