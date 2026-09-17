@@ -346,7 +346,7 @@ c4/c5 的文档级依据汇总（打勾制）：
 | Quickstart（setup 三模式/provider 表/64K 红线/首对话） | :209-604 |
 | Updating & Uninstalling（快照/回滚/Windows 三守卫/venv 事务） | :777-1146 |
 | Configuring Models（主+11 辅助槽/切模型清缓存） | :6491-6620 |
-| Messaging Gateway（27 平台对照表/架构） | :24604-24712 |
+| Messaging Gateway（28 行平台对照表（含 2 变体行）/架构） | :24604-24712 |
 | Skills System（目录/slash/链式//learn/opt-out） | :10899-11020 |
 | Cron（三路径/模型解析链/blocked_config/no-agent） | :15374-15461 |
 | Hermes Desktop 主章节（安装/界面/更新/卸载/远程后端/排障） | :70416-71107 |
