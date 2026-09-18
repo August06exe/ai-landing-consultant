@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>你的 AI 助理已上岗（骨架 · 由装配完成的 agent 按实际配置生成）</title>
+<!-- ============================================================
+  生成规则（给装配 agent 读——人类部署者请勿手工填充后直接发出）
+  1. 本页在【装配全部完成、逐项验证通过之后】由你生成：内容只准写你实际装配并验证过的能力。
+  2. 每个段落都是可选的：
+     - 你没有定时任务 → 删掉「它会自己来的」整段
+     - 本场景没有服务商（客户自装）→ 删掉服务商与费用段，费用改为一句「本机运行，按你使用的平台账单为准」或对应真实计费方式
+     - 某段你拿不准 → 删。删完剩下的就是真实。
+  3. 禁止：编造未装配的功能；预设费用数字（除非交付方案里真实约定过）；使用任何技术术语（cron/网关/token/API）。
+  4. 语气：像店里那个靠谱的熟人，不像官网。
+  5. 生成后自查：逐段问「这个我真的装了吗、验证过吗」——有一个「没有」就删那段。
+  以下骨架中 <!-- 段落 --> 注释标记全部为条件段。完成生成后删除本注释块与本行。
+============================================================ -->
+<style>
+  /* 暖人文方向 · 单文件 / 无外链 / 无渐变阴影 / 字号5档 / 单一哑光强调色 */
+  :root{
+    --bg:#f8f5f0; --ink:#2b2723; --ink2:#7a7166; --line:#e2dcd2; --accent:#a0522d;
+    --serif:Georgia,"Songti SC","SimSun",serif;
+    --sans:"PingFang SC","Microsoft YaHei",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.7;}
+  .wrap{max-width:640px;margin:0 auto;padding:48px 26px 60px;}
+  .top{font-family:Consolas,monospace;font-size:14px;letter-spacing:.2em;color:var(--accent);margin-bottom:14px;}
+  h1{font-family:var(--serif);font-size:40px;line-height:1.2;font-weight:600;letter-spacing:-0.01em;}
+  .lead{font-size:20px;color:var(--ink2);margin:10px 0 8px;}
+  .rule{border:none;border-top:1px solid var(--line);margin:34px 0;}
+  h2{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:14px;}
+  .step{padding:14px 0;border-bottom:1px solid var(--line);}
+  .step:last-child{border-bottom:none;}
+  .when{font-family:Consolas,monospace;font-size:14px;color:var(--accent);display:block;margin-bottom:2px;}
+  .big{font-size:20px;font-weight:550;}
+  .say{border:1px solid var(--line);padding:10px 16px;margin:10px 0;font-size:18px;}
+  .one{font-size:22px;font-weight:550;line-height:1.6;}
+  .foot{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);font-size:16px;color:var(--ink2);}
+  .foot strong{color:var(--accent);font-weight:550;}
+  .phone{font-family:Consolas,monospace;}
+  @media print{ body{background:#fff;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="top">DELIVERED · 已上岗</div>
+<h1>【助理名】已上岗</h1>
+<p class="lead">【客户称呼】，【一句话：从今天起它替你接管的具体事情，来自实际装配的工作流】。</p>
+
+<hr class="rule">
+
+<!-- 段落：定时/主动推送（仅当实际装配了定时任务时保留；没有则整段删除） -->
+<h2>它会自己来的</h2>
+<div class="step"><span class="when">【真实触发时点】</span><span class="big">【实际工作流产出，一句话】</span></div>
+<div class="step"><span class="when">【真实触发时点】</span><span class="big">【实际工作流产出，一句话】</span></div>
+
+<!-- 段落：客户侧动作（仅当工作流需要客户投喂/触发时保留） -->
+<h2>你要做的，就一件事</h2>
+<p class="one">【客户侧真实动作，具体到点哪里/发什么】</p>
+
+<!-- 段落：口令（仅当存在口令触发的工作流时保留） -->
+<h2>想让它干活，直接说</h2>
+<div class="say">【真实口令 1】</div>
+<div class="say">【真实口令 2】</div>
+
+<!-- 段落：求助（按实际支持方式保留其一） -->
+<h2>出问题了</h2>
+<p>① 先重启【实际宿主：电脑/应用】（多数问题重启就好）</p>
+<p>② 还不行 → 【实际求助方式：截图三要素发 XX / 查 FAQ 文件 / 社区地址】</p>
+
+<!-- 段落：边界（必留段：红线与真实计费口径。费用只按实际计费方式写，禁止编数字） -->
+<h2>它不做的事</h2>
+<p class="one">【实际红线，如：不碰钱/不碰账号/只整理不决定——来自进化守则】</p>
+<p>费用：【按实际计费方式写——本机运行则写「本机运行，无按量费用」；订阅则写订阅口径；API 则写「以你使用的平台账单为准」。拿不准就不写数字。】</p>
+
+<div class="foot">
+  <p><strong>它刚上岗会出错，教它一次记一辈子。</strong>【实际求助入口，若有】</p>
+</div>
+
+</div>
+</body>
+</html>
