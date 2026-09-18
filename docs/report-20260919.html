@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>长程任务报告 · v2.x 品质深化 · ai-landing-consultant</title>
+<style>
+  :root{
+    --bg:#fafafa; --ink:#141414; --ink2:#57606a; --line:#e2ded8;
+    --accent:#b3410f; --mono:Consolas,"JetBrains Mono",monospace;
+    --sans:"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;font-weight:400;}
+  .wrap{max-width:800px;margin:0 auto;padding:56px 28px 80px;}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--accent);text-transform:uppercase;}
+  h1{font-size:42px;line-height:1.15;font-weight:600;letter-spacing:-0.02em;margin:14px 0 10px;}
+  .lede{font-size:17px;color:var(--ink2);max-width:70ch;}
+  .meta{font-family:var(--mono);font-size:12px;color:var(--ink2);margin-top:18px;padding-bottom:26px;border-bottom:1px solid var(--line);}
+  .verdict{border:1px solid var(--ink);padding:22px 24px;margin:40px 0 0;}
+  .verdict .tag{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--accent);}
+  .verdict p{font-weight:550;font-size:17px;margin-top:8px;max-width:70ch;}
+  .verdict .sub{font-weight:400;font-size:14px;color:var(--ink2);margin-top:10px;}
+  section{margin-top:52px;}
+  .sec-no{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--accent);}
+  h2{font-size:24px;line-height:1.2;font-weight:600;margin:6px 0 16px;}
+  h3{font-size:17px;font-weight:550;margin:22px 0 8px;}
+  p{max-width:70ch;margin-bottom:14px;}
+  strong{font-weight:550;}
+  .evi{border-left:2px solid #dcd7cf;padding:2px 0 2px 18px;margin:18px 0;}
+  .evi .lab{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--ink2);display:block;margin-bottom:6px;}
+  .evi p{font-size:14px;margin-bottom:8px;}
+  table{width:100%;border-collapse:collapse;font-size:14px;margin:16px 0;}
+  th{font-weight:550;text-align:left;border-bottom:1.5px solid var(--ink);padding:8px 10px;}
+  td{border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:top;}
+  td.mono, .mono{font-family:var(--mono);font-size:14px;}
+  ul{padding-left:20px;margin-bottom:14px;max-width:70ch;}
+  li{margin-bottom:6px;}
+  .num{font-family:var(--mono);color:var(--accent);}
+  .src{font-family:var(--mono);font-size:12px;color:var(--ink2);}
+  ol.srcs{padding-left:0;list-style:none;counter-reset:s;}
+  ol.srcs li{counter-increment:s;font-family:var(--mono);font-size:14px;color:var(--ink2);margin-bottom:5px;}
+  ol.srcs li::before{content:counter(s,decimal-leading-zero) "  ";color:var(--ink2);}
+  footer{margin-top:64px;padding-top:18px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--ink2);}
+  @media print{ body{background:#fff;} .wrap{padding:20px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="kicker">AI-LANDING-CONSULTANT · LONG-RUN REPORT</div>
+<h1>长程任务报告<br>v2.x 品质深化</h1>
+<p class="lede">从「独立外评 6.8/10」出发的一夜：把评审的批评逐条变成机器看护、可安装技能与需求侧弹药，并以四脚本质量门收束。</p>
+<div class="meta">2026-09-19 · 分支 night-shift → main（<span class="num">362b401</span>）· 全仓 <span class="num">48</span> commits · <span class="num">196</span> 个跟踪文件 · CI privacy-guard + content-quality</div>
+
+<div class="verdict">
+  <div class="tag">VERDICT · 结论先行</div>
+  <p>今晚把外评的四条结构性批评全部变成了仓库内可指认的交付物：平台耦合有了机器看护（332 条断言自动复核），工序方法论变成了可安装的 11 个技能，需求侧有了成套弹药，评审链完整入库。仓库内「可控质量动作」至此做尽——剩下的成长只来自真实世界：第一次点火、第一个客户、第一个外部贡献者。</p>
+  <p class="sub">两套量表并行：门面量表 47.5/70（终审）；外评「拿来即用度」6.8/10 → v2.0/v2.x 对冲后其扣分项中「维护税」「需求侧弹药」已落地，「点火记录」仍待真实世界。</p>
+</div>
+
+<section>
+  <div class="sec-no">§ 1 · 背景</div>
+  <h2>一夜的起点是一份不给面子的评审</h2>
+  <p>独立第三方评审（与作者零关联、禁读自评区、自带量表）给出 <strong>6.8/10</strong>，并留下四条结构性批评：<strong>外部效度为零、自装配承诺缺实证、平台依赖行号会腐烂、需求侧零验证</strong>。它还点破了内部评审的盲区——我们的打分表里没有「维护税」和「单点维护者」的位置。</p>
+  <p>v2.0「从样机到可点火」与今晚的 v2.x 品质深化，就是对这份批评的两段式回应。</p>
+  <div class="evi">
+    <span class="lab">EVIDENCE 01 · 外评原文（存档于专题14）</span>
+    <p>「它是一台从未出厂验证过的样机：三天速成、单人制造、六个案例全是虚构，用对自己最有利的考卷给自己打了 47 分。」「如果明天有人抄走这套 SOP，作者没有任何追索和壁垒。」</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-no">§ 2 · 今晚五阶段</div>
+  <h2>四个 commits，六个新资产</h2>
+  <table>
+    <tr><th>阶段</th><th>交付物</th><th>数据</th></tr>
+    <tr><td class="mono">P1 tap 仓库</td><td>11 道工序转 SKILL.md（触发器式 frontmatter + When/Procedure/Pitfalls/Verification，宿主无关，终态限定）</td><td class="mono">11 技能 + README</td></tr>
+    <tr><td class="mono">P2 专题 15</td><td>《客户 FAQ》老板真实问法版，白话答案 + 内部依据双轨</td><td class="mono">6 类 12 问</td></tr>
+    <tr><td class="mono">P3 使用卡盲测</td><td>六卡黑话扫描（网关/token/API/模型档…）+ 报障三要素逐卡核对</td><td class="mono">0 泄漏 / 三要素全在位</td></tr>
+    <tr><td class="mono">P4 门面增值</td><td>banner 双主题 <span class="mono">&lt;picture&gt;</span> 切换、「你手上有什么」反查导航、策展账目表（中英）</td><td class="mono">+1 亮色 SVG</td></tr>
+    <tr><td class="mono">P5 CI 内容门</td><td><span class="mono">check-links.sh</span> 全仓链接检查 + content-quality job 扩容（numbers/anchors/links/五案例验收）</td><td class="mono">150 链 0 死链</td></tr>
+  </table>
+  <p class="src">v2.x 范围：4 commits / 23 files / +698 −15（84672fd..362b401）</p>
+</section>
+
+<section>
+  <div class="sec-no">§ 3 · 质量门体系</div>
+  <h2>四脚本 + 双 job，全部机器执行</h2>
+  <p>外评最认可的本仓资产是「核对纪律」，今晚它完成了从手工到机器的闭环。任何人在任何时刻 clone 本仓库，四条命令即可复验全部质量声明：</p>
+  <table>
+    <tr><th>脚本</th><th>管什么</th><th>今晚基线</th></tr>
+    <tr><td class="mono">check-privacy</td><td>客户数据/密钥（全历史扫描）</td><td class="mono">3 段体检全绿</td></tr>
+    <tr><td class="mono">check-numbers</td><td>门面数字 vs 仓库实测（7 项计数断言）+ 旧口径扫描 + 锚点 lint</td><td class="mono">7 项全过</td></tr>
+    <tr><td class="mono">check-anchors</td><td>llms 行号断言腐烂检测（硬/软双校验 + anchor-ok 机制）</td><td class="mono">332 条 · 0 确认腐烂</td></tr>
+    <tr><td class="mono">check-links</td><td>全仓 markdown 相对链接存在性（快照区豁免）</td><td class="mono">150 条 · 0 死链</td></tr>
+  </table>
+  <p>四脚本已接入 GitHub Actions <span class="mono">content-quality</span> job，与 privacy-guard 并列——<strong>每次 push 自动复验，声明的真实性不再依赖作者自觉</strong>。</p>
+</section>
+
+<section>
+  <div class="sec-no">§ 4 · 评审链与两套量表</div>
+  <h2>五轮评审，两把尺子</h2>
+  <table>
+    <tr><th>轮</th><th>评审方</th><th>独立性</th><th>结果</th></tr>
+    <tr><td class="mono">0</td><td>夜航自评</td><td class="mono">无</td><td class="mono">29→47/70（门面量表）</td></tr>
+    <tr><td class="mono">1</td><td>内部顾问 agent</td><td class="mono">低</td><td class="mono">复核 44/70</td></tr>
+    <tr><td class="mono">2-5</td><td>内部循环审校（四轮专项）</td><td class="mono">低</td><td class="mono">P0×4+P1×8 等逐轮清单</td></tr>
+    <tr><td class="mono">6</td><td>终审</td><td class="mono">中</td><td class="mono">47.5/70，「可拿去见人」</td></tr>
+    <tr><td class="mono">7</td><td><strong>独立第三方</strong></td><td class="mono"><strong>高</strong></td><td class="mono"><strong>6.8/10（拿来即用度）</strong></td></tr>
+  </table>
+  <p>外评指出的「考卷出窄了」已被采纳为结构修正：打分表 v2 新增四维——平台依赖（现 4）、维护税可持续（现 6，v2.0 前 0）、单点维护者（现 3）、需求侧验证（现 1）。<strong>门面维度的高分与工程现实的低分并存，这正是「样机」判定的量化表达。</strong></p>
+</section>
+
+<section>
+  <div class="sec-no">§ 5 · 剩余缺口</div>
+  <h2>三轨清单：每一条都明确属于谁</h2>
+  <ul>
+    <li><strong>人类 5 分钟轨</strong>：og PNG 导出上传、v2.x tag + Release（CHANGELOG 现成）、awesome-hermes-skills 提交拍板（条目草案存档）、FUNDING 决定、Pages 启用决定</li>
+    <li><strong>真实世界轨</strong>：首次真实点火（first-ignition 手册 + 点火日志模板已备）、Demo 视频拍摄（分镜已备）、第一个付费客户（获客手册+报价单+客户一页纸已备）、第一个外部贡献者（六档标签+九件套定义已备）</li>
+    <li><strong>持续轨</strong>：llms-full.txt 下次重抓后跑 check-anchors 复核；客户 FAQ 每次陪跑后追加</li>
+  </ul>
+  <p>仓库内的可控质量动作已经做尽——<strong>这不是一句自我安慰，而是三脚本+CI 的机械事实</strong>。下一步的每一分增长都必须来自仓库之外。</p>
+</section>
+
+<section>
+  <div class="sec-no">§ 6 · 来源与索引</div>
+  <h2>本报告每一项声明的出处</h2>
+  <ol class="srcs">
+    <li>独立第三方评审全文存档 — 02-知识库/01-专题/14-外部评审与评审链.md</li>
+    <li>门面量表与终审记录 — 02-知识库/01-专题/13-世界级开源门面解剖与对标.md §二/§五</li>
+    <li>指令断言核对（38 行判定）— 02-知识库/01-专题/12-交付包指令核对清单.md</li>
+    <li>锚点基线 — scripts/check-anchors.sh（2026-09-19 运行记录，332 条）</li>
+    <li>链接基线 — scripts/check-links.sh（150 条相对链接）</li>
+    <li>skills tap 仓库 — skills-tap/（11 SKILL.md + README，结构参照 superpowers MIT）</li>
+    <li>客户 FAQ — 02-知识库/01-专题/15-客户FAQ.md（素材：专题04/11/08）</li>
+    <li>点火就绪包 — docs/first-ignition.md + 05-客户/_模板/点火日志-模板.md</li>
+    <li>需求侧弹药 — 04-运营/获客手册.md · 报价单模板.md v1.1 · 客户一页纸.md</li>
+    <li>GitHub 状态 — Actions privacy-guard/content-quality 最新运行 success；Release v1.0.0；48 commits</li>
+  </ol>
+</section>
+
+<footer>ai-landing-consultant · 长程任务报告 v2.x · 2026-09-19 · 单文件自包含 · 排版遵循 html-report-craft 军规 · 冷白 #fafafa / 墨 #141414 / 强调 #b3410f</footer>
+
+</div>
+</body>
+</html>
