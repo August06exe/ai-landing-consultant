@@ -119,6 +119,7 @@ Every number below is countable inside the repo — `scripts/check-numbers.sh` r
 | 🏭 **11 SOPs (v2)** | Delivery line c1-c6 + companion line d1-d5, **each with acceptance checklists** | Consulting that replicates — not vibes |
 | 📋 **Full templates** | Client intake, delivery package (8 pieces), quotes, lead tracker, monthly retro | Walk out with a business |
 | 📜 **Service standard** | Three tiers, retainer SLA, out-of-scope policy, review grading | The constitution, if you want to sell this |
+| 🔌 **Installable skill pack** | The 11 SOPs as SKILL.md files (`skills-tap/`) + Hermes plugin shell (`.hermes-plugin/`) | `hermes plugins install` or plain copy — works in any CLI agent |
 
 ### Six complete sample cases
 
@@ -216,7 +217,8 @@ docs/           GitHub Pages landing (not enabled) | i18n glossary
 - [x] Maintenance-tax hedge: `check-anchors.sh` machine verification (332 assertions baselined) + platform-coupling statement + go-to-market kit (v2.0, 2026-09-19)
 - [ ] 🔴 **First real ignition**: complete one real (or free-pilot) engagement per `docs/first-ignition.md`, backfill the ignition log, and land the case — **top priority; everything else yields**
 - [ ] 🔴 Demo video up top: 60-second "hand over the package → self-assembly → first chat message" capture (storyboard ready in `04-运营/宣传素材/`)
-- [ ] Package the 11 SOPs as a Hermes skill group, two steps: ①skills-tap repo (zero code, installable via `hermes skills tap add`) ②thin plugin shell (plugin.yaml + register, superpowers-style) — then `hermes plugins install` becomes the one-liner
+- [x] 11 SOPs packaged as an installable skill group (v2.x, 2026-09-19): `skills-tap/` with 11 SKILL.md files (tap / copy-paste) + `.hermes-plugin/` thin shell (register verified 11/11)
+- [ ] On-device install verification: real-Hermes testing of both channels (post-ignition)
 - [ ] Second platform adapter: OpenClaw (minimal checklist in `02-知识库/00-平台适配层.md`)
 - [ ] One-click deploy wizard: c4 as a next-next-done installer (upgrade/uninstall/rollback included)
 - [ ] Content-quality CI: package-structure lint + case-link checker
