@@ -24,7 +24,7 @@ N_PLATFORMS=$(awk 'NR>=24634 && NR<=24661 && /^\|/ {c++} END {print c+0}' 02-知
 echo "=== 仓库实测：专题=$N_TOPICS 案例=$N_CASES 领域技能=$N_ADVISORS 入库技能=$N_SKILLS 工序=$N_SOPS 配方=$N_RECIPES ==="
 
 # ---------- 声明断言 ----------
-[ "$N_TOPICS" -eq 14 ]    && ok "专题 14"    || bad "专题数实测 $N_TOPICS ≠ 声明 14（改 README/文案或补专题后同步）"
+[ "$N_TOPICS" -eq 15 ]    && ok "专题 15"    || bad "专题数实测 $N_TOPICS ≠ 声明 15（改 README/文案或补专题后同步）"
 [ "$N_CASES" -eq 6 ]      && ok "案例 6"      || bad "案例数实测 $N_CASES ≠ 声明 6"
 [ "$N_ADVISORS" -eq 4 ]   && ok "领域技能 4"  || bad "领域技能实测 $N_ADVISORS ≠ 声明 4"
 [ "$N_SKILLS" -eq 8 ]     && ok "入库技能 8"  || bad "入库技能实测 $N_SKILLS ≠ 声明 8"

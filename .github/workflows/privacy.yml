@@ -18,3 +18,21 @@ jobs:
         run: |
           bash scripts/check-package.sh "05-客户/_模板" || \
           echo "::warning::模板目录结构与 check-package 期望不一致（若为有意变更请同步更新脚本）"
+
+  content-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: 门面数字一致性+锚点复核
+        run: bash scripts/check-numbers.sh
+      - name: llms 行号锚点腐烂检测
+        run: bash scripts/check-anchors.sh
+      - name: 全仓 markdown 相对链接检查
+        run: bash scripts/check-links.sh
+      - name: 六案例验收（拉面店为 v1 骨架，允许缺执行单）
+        run: |
+          for c in 示例-财务会计月结 示例-投资人大盘追踪 示例-诊所预约管理 示例-餐饮评价管家 示例-征期提醒官; do
+            bash scripts/check-package.sh "02-知识库/04-案例库/$c"
+          done

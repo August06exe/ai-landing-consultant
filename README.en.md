@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src=".github/assets/banner.svg" alt="AI Landing Consultant" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/banner.svg">
+  <img src=".github/assets/banner-light.svg" alt="AI Landing Consultant" width="100%">
+</picture>
 
 # Your client's data never leaves their machine
 
@@ -14,7 +17,7 @@
 
 **We don't deliver documents. We deliver an agent that assembles itself.**
 
-11 standard operating procedures · 8 consultant skills (4 domain-compliance packs included) · 6 complete sample cases · 14 field guides
+11 standard operating procedures · 8 consultant skills (4 domain-compliance packs included) · 6 complete sample cases · 15 field guides
 
 [Get started](#quick-start) · [See a full case first](#six-complete-sample-cases) · [The methodology](#11-standard-operating-procedures) · [FAQ](#faq)
 
@@ -90,9 +93,19 @@ sequenceDiagram
 |---|---|---|
 | **A business owner** who wants their own AI assistant | Hand this repo to anyone comfortable with computers (or any CLI agent) and have them read `01-顾问agent/提示词.md` + `03-SOP/c1-需求调研.md` | They'll start with a first-visit question sheet. Thirty minutes about your daily grind — the process takes it from there |
 | **A freelancer or shop** that wants to sell AI landing services | Read [`04-运营/服务标准.md`](04-运营/服务标准.md) — three service tiers, acceptance standards, out-of-scope policy | Wake your consultant agent with `04-运营/启动指令.md` and run your first engagement through `03-SOP/` (first one free is the recommended playbook) |
-| **You just want the knowledge base** | Read the [14 field guides](02-知识库/01-专题/) and [workflow recipes](02-知识库/05-配方库/01-六大通用模式配方.md) | Pull the latest official docs: `bash scripts/fetch-hermes-docs.sh` |
+| **You just want the knowledge base** | Read the [15 field guides](02-知识库/01-专题/) and [workflow recipes](02-知识库/05-配方库/01-六大通用模式配方.md) | Pull the latest official docs: `bash scripts/fetch-hermes-docs.sh` |
 
 👀 **Non-technical? Read one complete case (10 minutes):** [Ramen shop owner](02-知识库/04-案例库/示例-拉面店老王/README.md) — interview to delivery package to user card, end to end. *(Case docs are in Chinese; the package structure is universal.)*
+
+## Curation ledger (why this is trustworthy)
+
+Every number below is countable inside the repo — `scripts/check-numbers.sh` re-verifies on demand:
+
+- Instruction audit: **38 verdicts** — 25 consistent with official docs / **11 errors fixed in place** / 2 flagged (field guide 12)
+- llms line-number anchors: **332 machine-verified**; 13 rotted anchors caught and fixed same day (check-anchors)
+- **15 field guides**: every claim carries a source and date; 3-month staleness rule enforced
+- **5 review rounds** including one isolation-reviewed external audit (6.8/10, archived in field guide 14) — negative findings kept on record
+- All **6 sample cases are fictional and labeled as such** — the word "real" is reserved for real deliveries
 
 ## What's inside
 
@@ -100,7 +113,7 @@ sequenceDiagram
 |---|---|---|
 | 🧠 **Consultant prompt** | A senior landing consultant's persona: evidence-driven, ROI-minded, 1-3-1 escalation, risk-first | Load it into any CLI agent and go |
 | 🛠️ **8 skills** | grill-me/grilling interview method · deep-search · web-crawler · **four domain advisors: finance / investment / data / legal**, each with compliance red lines | Built on [mattpocock/skills](https://github.com/mattpocock/skills) (MIT) |
-| 📚 **Knowledge base ×14** | Channel selection (including the WeChat iLink pitfalls), Windows/Desktop deployment, model access, ops triage, secrets & privacy baseline, pain-point research, **a complete Desktop user guide**, **a full instruction audit** (38 verdicts, 11 fixed in-place), **a world-class facade benchmark** | Every claim carries a source and date; instructions audited line-by-line against official docs |
+| 📚 **Knowledge base ×15** | Channel selection (including the WeChat iLink pitfalls), Windows/Desktop deployment, model access, ops triage, secrets & privacy baseline, pain-point research, **a complete Desktop user guide**, **a full instruction audit** (38 verdicts, 11 fixed in-place), **a world-class facade benchmark** | Every claim carries a source and date; instructions audited line-by-line against official docs |
 | 🧩 **Workflow recipes** | Six universal patterns · heartbeat recipe · machine-migration runbook | Recognize the pattern, copy the skeleton, finish with the 7-step methodology |
 | 🍜 **Sample cases ×6** | See the table below | One package skeleton × four compliance regimes |
 | 🏭 **11 SOPs (v2)** | Delivery line c1-c6 + companion line d1-d5, **each with acceptance checklists** | Consulting that replicates — not vibes |
@@ -184,7 +197,7 @@ flowchart TB
 
 ```
 01-顾问agent/   Consultant prompt + skills/ (interview, research, crawler + 4 domain advisors)
-02-知识库/      Knowledge base: 14 field guides | official docs (script-pulled) | reference skills | 6 cases | recipes
+02-知识库/      Knowledge base: 15 field guides | official docs (script-pulled) | reference skills | 6 cases | recipes
 03-SOP/         c1-c6 delivery | d1-d5 companion | workflow methodology (each with checklists)
 04-运营/        Operations: kickoff prompt, service standard, file conventions, quotes, retros
 05-客户/        _templates/ (active client data stays local — see .gitignore)
