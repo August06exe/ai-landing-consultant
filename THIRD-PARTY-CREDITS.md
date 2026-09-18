@@ -22,6 +22,16 @@
 | **anything-llm 隐私透明化章节结构** | [Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm) | MIT | 仅借鉴「隐私设计」节的对外叙事结构 |
 | **zeroclaw 数据主权口号写法** | [zeroclaw-labs/zeroclaw](https://github.com/zeroclaw-labs/zeroclaw) | Apache-2.0（README 称 MIT OR Apache-2.0） | 仅借鉴首屏主张写法；本项目口号为原创中文表述 |
 
+## 思想与结构借鉴（2026-09-18 夜航调研新增，均未复制内容）
+
+| 借鉴了什么 | 来源 | 许可证 | 说明 |
+|---|---|---|---|
+| **CowAgent 门面动线**（Demo 视频置顶思想、Enterprise Services 节结构、模型/渠道能力矩阵表） | [zhayujie/CowAgent](https://github.com/zhayujie/CowAgent) | MIT | 仅借鉴结构与思想；Roadmap Demo 视频项与 README 案例对照表受其启发（详见 `02-知识库/01-专题/13`） |
+| **hermes-agent README 动线纪律**（安装后紧跟 After installation、Lang 徽章当语言导航） | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | MIT | 目标平台；语言徽章区采用其徽章法 |
+| **awesome-openclaw-skills 剔除账目表思想**（用剔除量证明策展） | [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) | MIT | 仅借鉴「策展价值用账目量化」思想（Roadmap） |
+| **n8n 模板页「What's in your stack?」反查动线** | [n8n-io/n8n](https://github.com/n8n-io/n8n) | fair-code（仅观察，未复制内容） | 仅借鉴按用户已有工具导航的思想（Roadmap） |
+| **ODS「退出成本前置」信任话术**（首屏写卸载命令） | [Osmantic/ODS](https://github.com/Osmantic/ODS) | Apache-2.0 | 仅借鉴反向信任写法（Roadmap 一键部署向导项） |
+
 ## 未收录（许可证原因）
 
 - **claude-deep-research-skill**（[199-biotechnologies](https://github.com/199-biotechnologies/claude-deep-research-skill)）：无许可证，**不随本仓库分发**。本仓库的 `deep-search` 技能不依赖它即可独立运行；本地装有该管线的用户可自行增强。

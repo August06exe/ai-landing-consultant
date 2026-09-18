@@ -1,3 +1,5 @@
+> 快照：2026-09-16 抓取 ｜ 来源：https://raw.githubusercontent.com/ZeroPointRepo/awesome-hermes-skills/main/README.md
+
 <p align="center">
   <img src="./banner.png" alt="Awesome Hermes Skills" width="800">
 </p>
