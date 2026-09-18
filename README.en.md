@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src=".github/assets/banner.svg" alt="AI Landing Consultant" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/banner.svg">
+  <img src=".github/assets/banner-light.svg" alt="AI Landing Consultant" width="100%">
+</picture>
 
 # Your client's data never leaves their machine
 
@@ -93,6 +96,16 @@ sequenceDiagram
 | **You just want the knowledge base** | Read the [15 field guides](02-知识库/01-专题/) and [workflow recipes](02-知识库/05-配方库/01-六大通用模式配方.md) | Pull the latest official docs: `bash scripts/fetch-hermes-docs.sh` |
 
 👀 **Non-technical? Read one complete case (10 minutes):** [Ramen shop owner](02-知识库/04-案例库/示例-拉面店老王/README.md) — interview to delivery package to user card, end to end. *(Case docs are in Chinese; the package structure is universal.)*
+
+## Curation ledger (why this is trustworthy)
+
+Every number below is countable inside the repo — `scripts/check-numbers.sh` re-verifies on demand:
+
+- Instruction audit: **38 verdicts** — 25 consistent with official docs / **11 errors fixed in place** / 2 flagged (field guide 12)
+- llms line-number anchors: **332 machine-verified**; 13 rotted anchors caught and fixed same day (check-anchors)
+- **15 field guides**: every claim carries a source and date; 3-month staleness rule enforced
+- **5 review rounds** including one isolation-reviewed external audit (6.8/10, archived in field guide 14) — negative findings kept on record
+- All **6 sample cases are fictional and labeled as such** — the word "real" is reserved for real deliveries
 
 ## What's inside
 
