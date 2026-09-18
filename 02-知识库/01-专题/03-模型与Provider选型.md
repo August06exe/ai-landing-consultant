@@ -15,7 +15,7 @@
 | **Nous Portal**（`hermes setup --portal`） | 小白、Windows 客户（**首选**） | 一次 OAuth 搞定模型+工具类 provider（TTS/web 等多把 key 一次配齐，:87976-87978）；300+ 模型一个订阅；token 计费 9 折（:6505） | 订阅费；国内支付/网络需实测（**待回填**） |
 | **OpenRouter** | 想灵活换模型的客户 | 200+ 模型一个 key | 需外币支付；网络条件 |
 | **Custom API**（OpenAI 兼容端点） | **国内客户现实解**：GLM/DeepSeek/通义/中转站 | `.env` 设 `OPENAI_BASE_URL` + key 即可（:5213-5215）；人民币支付、无网络问题 | 质量参差；中转站稳定性与数据安全需尽调 |
-| **本地模型**（vLLM/Ollama/LM Studio） | 数据敏感、机器好的客户 | 数据不出机 | Windows 原生支持（:87694）；质量/速度吃硬件 |
+| **本地模型**（vLLM/Ollama/LM Studio） | 数据敏感、机器好的客户 | 数据不出机 | Windows 原生支持（:87984-87996 功能矩阵）；质量/速度吃硬件 |
 
 ## 关键成本知识（陪跑期用）
 
