@@ -25,6 +25,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: 容错拉取官方文档（llms-full.txt 为本地资产；拉取失败则锚点/平台断言自动降级）
+        run: timeout 60 bash scripts/fetch-hermes-docs.sh || echo "::warning::官方文档拉取失败，锚点/平台断言降级为跳过"
       - name: 门面数字一致性+锚点复核
         run: bash scripts/check-numbers.sh
       - name: llms 行号锚点腐烂检测

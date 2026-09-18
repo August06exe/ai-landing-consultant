@@ -19,7 +19,11 @@ N_ADVISORS=$(ls -d 01-顾问agent/skills/*-advisor 2>/dev/null | wc -l)
 N_SKILLS=$(ls -d 01-顾问agent/skills/*/ 2>/dev/null | grep -vc deep-research)  # deep-research 本地自用不入库
 N_SOPS=$(ls 03-SOP/c[0-9]*.md 03-SOP/d[0-9]*.md 2>/dev/null | wc -l)
 N_RECIPES=$(ls 02-知识库/05-配方库/[0-9]*.md 2>/dev/null | wc -l)
-N_PLATFORMS=$(awk 'NR>=24634 && NR<=24661 && /^\|/ {c++} END {print c+0}' 02-知识库/02-官方文档/llms-full.txt)
+if [ -f 02-知识库/02-官方文档/llms-full.txt ]; then
+  N_PLATFORMS=$(awk 'NR>=24634 && NR<=24661 && /^\|/ {c++} END {print c+0}' 02-知识库/02-官方文档/llms-full.txt)
+else
+  N_PLATFORMS=""   # llms-full.txt 为本地资产（fetch-hermes-docs.sh 拉取），CI 环境无 → 跳过该项
+fi
 
 echo "=== 仓库实测：专题=$N_TOPICS 案例=$N_CASES 领域技能=$N_ADVISORS 入库技能=$N_SKILLS 工序=$N_SOPS 配方=$N_RECIPES ==="
 
@@ -30,7 +34,13 @@ echo "=== 仓库实测：专题=$N_TOPICS 案例=$N_CASES 领域技能=$N_ADVISO
 [ "$N_SKILLS" -eq 8 ]     && ok "入库技能 8"  || bad "入库技能实测 $N_SKILLS ≠ 声明 8"
 [ "$N_SOPS" -eq 11 ]      && ok "工序 11"     || bad "工序实测 $N_SOPS ≠ 声明 11"
 [ "$N_RECIPES" -eq 3 ]    && ok "配方 3"      || bad "配方实测 $N_RECIPES ≠ 声明 3"
-[ "$N_PLATFORMS" -eq 28 ] && ok "平台对照 28 行" || bad "平台对照实测 $N_PLATFORMS 行 ≠ 基准 28（llms 重抓会漂移——先复核锚点再改声明）"
+if [ -z "$N_PLATFORMS" ]; then
+  echo "⏭️  平台对照跳过（llms-full.txt 为本地资产，CI 环境不存在；本地运行时复验）"
+elif [ "$N_PLATFORMS" -eq 28 ]; then
+  ok "平台对照 28 行"
+else
+  bad "平台对照实测 $N_PLATFORMS 行 ≠ 基准 28（llms 重抓会漂移——先复核锚点再改声明）"
+fi
 
 # ---------- 文件中的数字出现检查（防旧数字回流） ----------
 echo "=== 文档声明扫描 ==="
