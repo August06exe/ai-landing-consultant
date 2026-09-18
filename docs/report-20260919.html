@@ -140,6 +140,25 @@
   </ol>
 </section>
 
+
+<section>
+  <div class="sec-no">§ 7 · 追加 · 插件化与推演验证（第二轮夜航）</div>
+  <h2>CI 抓到了自己的 bug，然后两步走收官</h2>
+  <p>今晚开场，<strong>前一晚接入 CI 的脚本在远端环境首次运行即失败</strong>——llms-full.txt 是不入库的本地资产，Actions 环境必然没有它。修复为双态设计：本地资产缺失时脚本优雅降级（SKIP 并明示），CI 端容错拉取官方文档（成功则全量校验，失败自动降级）。缺失/恢复两态均实测通过。</p>
+  <div class="evi">
+    <span class="lab">EVIDENCE 02 · register 模拟注册</span>
+    <p>薄壳插件 <span class="mono">.hermes-plugin/</span>（plugin.yaml + __init__.py）：register(ctx) 对 skills-tap/ 11 个 SKILL.md 的注册模拟验证 <strong>11/11</strong> 通过；py_compile 通过。两步走（tap 仓库 → 薄壳插件）至此收官，真机安装验证挂入点火后清单。</p>
+  </div>
+  <table>
+    <tr><th>阶段</th><th>交付物</th><th>结果</th></tr>
+    <tr><td class="mono">开场</td><td>CI 环境依赖 bug 修复（降级+容错拉取）</td><td class="mono">缺失/全量双态 PASS</td></tr>
+    <tr><td class="mono">插件化</td><td>.hermes-plugin/ 薄壳（register 11 技能）</td><td class="mono">静态+模拟验证 11/11</td></tr>
+    <tr><td class="mono">推演</td><td>first-ignition 桌面推演</td><td class="mono">实锤 4 缺口并修复（bash 环境声明/唤醒顾问指引/甩包路径/点火日志自动进建户）</td></tr>
+    <tr><td class="mono">接线</td><td>README 中英 Roadmap 勾选 + 模块表加「可安装技能包」行</td><td class="mono">—</td></tr>
+  </table>
+  <p>推演的具体收获：new-client.sh 现在建户即自动把点火日志模板铺进陪跑日志——第一份真实交付的记录容器从「要记得去拿」变成「生下来就有」。</p>
+</section>
+
 <footer>ai-landing-consultant · 长程任务报告 v2.x · 2026-09-19 · 单文件自包含 · 排版遵循 html-report-craft 军规 · 冷白 #fafafa / 墨 #141414 / 强调 #b3410f</footer>
 
 </div>
