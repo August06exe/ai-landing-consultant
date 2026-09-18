@@ -22,7 +22,7 @@
 ## Desktop 更新的坑（陪跑期高频故障）
 
 - `hermes update` 在 Windows 上**拒绝运行**如果有进程锁住 hermes.exe——最常见就是 Desktop app 开着、别的终端开着 hermes REPL、网关在跑。提示语是「Close Hermes Desktop, exit any open hermes REPLs…」（:940-958）。
-- 依赖同步中途死在 access-denied 会把安装卡在两个版本之间；这个保护 `--force` 绕不开，只有 `hermes update --force-venv` 显式豁免（:958）。
+- 依赖同步中途死在 access-denied 会把安装卡在两个版本之间；这个保护 `--force` 绕不开，只有 `hermes update --force-venv` 显式豁免（:970）。
 - Desktop 更新是 stage-and-swap：新包验证通过才替换，失败则旧版保持可启动（:814-815）；更新后网关自动重启（:815）。
 - **本地改动不会自动恢复**：Desktop 更新走 `--keep-stash`，客户自己改过的源码会进 git stash 停放，更新日志会打印恢复命令（:880）。顾问远程协助更新时记得看 stash。
 - 可用配置关闭被动更新检查；`hermes update --check` 仍可用（:803）。
